@@ -3099,6 +3099,11 @@ namespace Radzen.Blazor
                     shouldUpdateState = true;
                 }
 
+                if (IsLoading == false && View.Any() == false)
+                {
+                    shouldUpdateState = true;
+                }
+
                 if (shouldUpdateState)
                 {
                     skip = CurrentPage * GetPageSize();
